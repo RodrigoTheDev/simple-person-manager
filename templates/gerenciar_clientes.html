@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de clientes</title>
+</head>
+<body>
+    <h2>Adicionar clientes</h2>
+
+    <form action="/salvar_cliente" method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="">
+        <label for="telefone">Telefone: </label>
+        <input type="text" name="nome" id="">
+        <label for="email">Email: </label>
+        <input type="text" name="nome" id="">
+    </form>
+
+    <hr>
+
+    <h2>Lista de clientes</h2>
+    {% for item in clientes %}
+        <p>{{item[0]}}, {{item[1]}}, {{item[2]}}, {{item[3]}}</p>
+    {% endfor %}
+</body>
+</html>
